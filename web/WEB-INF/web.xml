@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>filter.LoginFilter</filter-class>
+    </filter> 
+    <filter>
+        <filter-name>RoleFilter</filter-name>
+        <filter-class>filter.RoleFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/Cart.jsp</url-pattern>
+        <url-pattern>/ChangePass.jsp</url-pattern>
+        <url-pattern>/MyOrder.jsp</url-pattern>
+        <url-pattern>/OrderDetail.jsp</url-pattern>
+        <url-pattern>/DashBoardAdmin.jsp</url-pattern>
+        <url-pattern>/EditAccount.jsp</url-pattern>
+        <url-pattern>/Edit.jsp</url-pattern>
+        <url-pattern>/LeftDashBoard.jsp</url-pattern>
+        <url-pattern>/ManagerAccountDB.jsp</url-pattern>
+       <url-pattern>/ManagerInvoiceDB.jsp</url-pattern>
+       <url-pattern>/ManagerProductDB.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RoleFilter</filter-name>
+         <url-pattern>/DashBoardAdmin.jsp</url-pattern>
+        <url-pattern>/EditAccount.jsp</url-pattern>
+        <url-pattern>/Edit.jsp</url-pattern>
+        <url-pattern>/LeftDashBoard.jsp</url-pattern>
+        <url-pattern>/ManagerAccountDB.jsp</url-pattern>
+       <url-pattern>/ManagerInvoiceDB.jsp</url-pattern>
+       <url-pattern>/ManagerProductDB.jsp</url-pattern>
+    </filter-mapping>
+    <welcome-file-list>
+        <welcome-file>home</welcome-file>
+    </welcome-file-list>
+</web-app>
